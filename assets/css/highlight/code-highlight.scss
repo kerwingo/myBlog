@@ -1,0 +1,76 @@
+code::-webkit-scrollbar {
+    width: 4px;
+    height: 4px
+}
+
+code::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: #999
+}
+
+code::-webkit-scrollbar-track-piece {
+    background: #eee
+}
+
+#article-editor pre {
+    position: relative;
+    border-radius: 4px;
+    background-color: #eee;
+    max-width: 800px;
+    padding: 20px 15px;
+    .copy-btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        min-width: 50px;
+        height: 20px;
+        font-size: 16px;
+        text-align: center;
+        opacity: 0;
+        transition: all 0.25s;
+        cursor: pointer;
+    }
+}
+
+#article-editor pre:hover {
+    .copy-btn {
+        opacity: 1;
+    }
+}
+
+#article-editor pre code {
+    display: block;
+    line-height: 24px;
+}
+
+#article-editor pre .repair {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #f5f8fa;
+    right: 0;
+    bottom: 0;
+}
+
+#article-editor pre .pre-head {
+    color: #5a5a5a;
+    display: flex;
+    align-items: center;
+    p {
+        display: flex;
+        margin-bottom: 0px !important;
+    }
+}
+
+#article-editor pre .pre-head .code-language {
+    opacity: 1;
+    margin-top: -0.1em;
+    font-weight: bold;
+    font-size: .9em;
+    font-family: Ubuntu, sans-serif;
+    transition: all .3s ease
+}
+
+#article-editor pre code.hljs {
+    padding: 0;
+}
